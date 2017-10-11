@@ -12,7 +12,7 @@ El propósito del repositorio es subir a la rama gh-pages el contenido generado 
 
 - npm run build
 
-- Subo los cambios a master añadiendo dist en .gitignore
+- Quito dist de .gitignore
 
 - Seguir instrucciones de https://gist.github.com/cobyism/4730490 para subir el contenido de dist en gh-pages.
 
