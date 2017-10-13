@@ -20,9 +20,11 @@ Seguido el tutorial [Setup GitHub Pages "gh-pages" branch as a subfolder within 
 
 - cd dist
 
-- git checkout -b gh-pages
+- git checkout -b gh-pages //-b la primera vez
 
-- git add, git commit y git push origin gh-pages.
+- git add -f index.html static
+
+- git commit y git push origin gh-pages.
 
 Resultado en https://cristinafsanz.github.io/vue-gh-pages/#/.
 
