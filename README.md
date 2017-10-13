@@ -20,7 +20,7 @@ El propósito del repositorio es subir a la rama gh-pages el contenido generado 
 
 - Dejar sólo index.html y los assets en la rama (método manual para probar resultado, pendiente investigar método para que no se suba /dist en master y subir ficheros a gh-pages).
 
-	- rm -fr test static/ src/ package.json index.html config/ build/ node_modules/ README.md
+	- rm -fr test static/ src/ package.json index.html config/ build/ node_modules/ README.md .postcssrc.js .eslintrc.js .eslintignore .editorconfig .babelrc .DS_Store
 
 	- mv dist/* .
 
