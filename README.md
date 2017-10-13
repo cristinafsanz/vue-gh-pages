@@ -6,17 +6,23 @@ El propósito del repositorio es subir a la rama gh-pages el contenido generado 
 
 ## Instrucciones:
 
-- Se ha cambiado la ruta en config.index.js: assetsPublicPath: '/vue-gh-pages/dist/'
+Seguido el tutorial [Setup GitHub Pages "gh-pages" branch as a subfolder within the "master" project](https://gist.github.com/chrisjacob/825950).
 
-- npm install
+- Se incluye el directorio /dist de .gitignore.
 
-- npm run build
+- Generar el directorio de salida.
 
-- Quito dist de .gitignore
+	- npm install //la primera vez
 
-- Seguir instrucciones de https://gist.github.com/cobyism/4730490 para subir el contenido de dist en gh-pages.
+	- npm run build
 
-    - git add dist && git commit -m "Initial dist subtree commit"
+- git add, git commit y git push origin master.
 
-    - git subtree push --prefix dist origin gh-pages
+- cd dist
+
+- git checkout -b gh-pages
+
+- git add, git commit y git push origin gh-pages.
+
+Resultado en https://cristinafsanz.github.io/vue-gh-pages/#/.
 
