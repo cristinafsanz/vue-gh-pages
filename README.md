@@ -6,9 +6,9 @@ El propósito del repositorio es subir a la rama gh-pages el contenido generado 
 
 ## Instrucciones:
 
-Seguido el tutorial [Setup GitHub Pages "gh-pages" branch as a subfolder within the "master" project](https://gist.github.com/chrisjacob/825950).
-
 - Se incluye el directorio /dist de .gitignore.
+
+- git add, git commit y git push origin master.
 
 - Generar el directorio de salida.
 
@@ -16,15 +16,17 @@ Seguido el tutorial [Setup GitHub Pages "gh-pages" branch as a subfolder within 
 
 	- npm run build
 
-- git add, git commit y git push origin master.
-
-- cd dist
-
 - git checkout -b gh-pages //-b la primera vez
 
-- git add -f index.html static
+- Dejar sólo index.html y los assets en la rama (método manual para probar resultado, pendiente investigar método para que no se suba /dist en master y subir ficheros a gh-pages).
 
-- git commit y git push origin gh-pages.
+	- rm -fr test static/ src/ package.json index.html config/ build/ node_modules/ README.md
+
+	- mv dist/* .
+
+	- rm -fr dist/
+
+	- git add, git commit y git push origin gh-pages.
 
 Resultado en https://cristinafsanz.github.io/vue-gh-pages/#/.
 
