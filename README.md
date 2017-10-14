@@ -24,6 +24,8 @@ Seguido el tutorial [Simple Deployment to GH Pages](https://discourse.gohugo.io/
 
 - Clonar la rama gh-pages desde el repositorio local a un repositorio localizado en dist.
 
+	- git checkout master
+
 	- git clone .git --branch gh-pages dist
 
 - Generar el directorio de salida.
@@ -36,7 +38,7 @@ Seguido el tutorial [Simple Deployment to GH Pages](https://discourse.gohugo.io/
 
 	- cd dist
 
-	- git add --all -f
+	- git add .
 
 	- git commit -m "Publishing to gh-pages"
 
