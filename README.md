@@ -14,6 +14,14 @@ Seguido el tutorial [Simple Deployment to GH Pages](https://discourse.gohugo.io/
 
 	- rm -fr dist
 
+- Crear una rama gh-pages vacía y subir a GitHub
+
+	- git checkout gh-pages
+
+	- rm -fr *
+
+	- git add . && git commit -m "Initial branch" && git push origin gh-pages
+
 - Clonar la rama gh-pages desde el repositorio local a un repositorio localizado en dist.
 
 	- git clone .git --branch gh-pages dist
