@@ -6,9 +6,17 @@ El propósito del repositorio es subir a la rama gh-pages el contenido generado 
 
 ## Instrucciones:
 
-- Se incluye el directorio /dist de .gitignore.
+Seguido el tutorial [Simple Deployment to GH Pages](https://discourse.gohugo.io/t/simple-deployment-to-gh-pages/5003).
 
-- git add, git commit y git push origin master.
+- Se incluye el directorio /dist de .gitignore para que no se suba a la rama master.
+
+- Borrar el directorio dist para que esté vacío:
+
+	- rm -fr dist
+
+- Clonar la rama gh-pages desde el repositorio local a un repositorio localizado en dist.
+
+	- git clone .git --branch gh-pages dist
 
 - Generar el directorio de salida.
 
@@ -16,17 +24,15 @@ El propósito del repositorio es subir a la rama gh-pages el contenido generado 
 
 	- npm run build
 
-- git checkout -b gh-pages //-b la primera vez
+- Hacer commit de los cambios en el directorio creado y hacer push a la rama local gh-pages.
 
-- Dejar sólo index.html y los assets en la rama (método manual para probar resultado, pendiente investigar método para que no se suba /dist en master y subir ficheros a gh-pages).
+	- cd dist
 
-	- rm -fr test static/ src/ package.json index.html config/ build/ node_modules/ README.md .postcssrc.js .eslintrc.js .eslintignore .editorconfig .babelrc .DS_Store
+	- git add --all -f
 
-	- mv dist/* .
+	- git commit -m "Publishing to gh-pages"
 
-	- rm -fr dist/
-
-	- git add, git commit y git push origin gh-pages.
+	- git push origin gh-pages
 
 Resultado en https://cristinafsanz.github.io/vue-gh-pages/#/.
 
