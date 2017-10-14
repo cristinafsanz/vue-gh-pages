@@ -43,4 +43,3 @@ Seguido el tutorial [Simple Deployment to GH Pages](https://discourse.gohugo.io/
 	- git push origin gh-pages
 
 Resultado en https://cristinafsanz.github.io/vue-gh-pages/#/.
-
