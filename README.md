@@ -18,7 +18,7 @@ Seguido el tutorial [Simple Deployment to GH Pages](https://discourse.gohugo.io/
 
 	- git checkout -b gh-pages
 
-	- rm -fr *
+	- rm -fr * //borrar los ocultos que nos sean necesarios también
 
 	- git add . && git commit -m "Initial branch" && git push origin gh-pages
 
