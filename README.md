@@ -16,7 +16,7 @@ Seguido el tutorial [Simple Deployment to GH Pages](https://discourse.gohugo.io/
 
 - Crear una rama gh-pages vacía y subir a GitHub
 
-	- git checkout gh-pages
+	- git checkout -b gh-pages
 
 	- rm -fr *
 
