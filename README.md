@@ -6,7 +6,7 @@ El propósito del repositorio es subir a la rama gh-pages el contenido generado 
 
 ## Instrucciones:
 
-Seguido el tutorial [Simple Deployment to GH Pages](https://discourse.gohugo.io/t/simple-deployment-to-gh-pages/5003).
+Seguidos los tutoriales [Simple Deployment to GH Pages](https://discourse.gohugo.io/t/simple-deployment-to-gh-pages/5003) y [Setup GitHub Pages "gh-pages" branch and "master" branch as subfolders](https://gist.github.com/chrisjacob/833223/ee7cfb6413262754c79840c28b4202d461154658).
 
 - Se incluye el directorio /dist de .gitignore para que no se suba a la rama master.
 
@@ -14,19 +14,23 @@ Seguido el tutorial [Simple Deployment to GH Pages](https://discourse.gohugo.io/
 
 	- rm -fr dist
 
-- Crear una rama gh-pages vacía y subir a GitHub
+- Clonar el repositorio en dist y dejar sólo rama gh-pages vacía.
 
-	- git checkout -b gh-pages
+	- mkdir dist
 
-	- rm -fr * //borrar los ocultos que nos sean necesarios también
+	- cd dist
 
-	- git add . && git commit -m "Initial branch" && git push origin gh-pages
+	- git clone https://github.com/cristinafsanz/vue-gh-pages.git .
 
-- Clonar la rama gh-pages desde el repositorio local a un repositorio localizado en dist.
+	- git checkout origin/gh-pages -b gh-pages
 
-	- git clone .git --branch gh-pages dist
+	- git branch -d master
+
+	- rm -fr * //también borrar los ficheros ocultos menos el .git
 
 - Generar el directorio de salida.
+
+	- cd ..
 
 	- npm install //la primera vez
 
@@ -36,10 +40,11 @@ Seguido el tutorial [Simple Deployment to GH Pages](https://discourse.gohugo.io/
 
 	- cd dist
 
-	- git add --all -f
+	- git add .
 
 	- git commit -m "Publishing to gh-pages"
 
 	- git push origin gh-pages
 
 Resultado en https://cristinafsanz.github.io/vue-gh-pages/#/.
+
