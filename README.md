@@ -16,6 +16,8 @@ Seguidos los tutoriales [Simple Deployment to GH Pages](https://discourse.gohugo
 
 - Clonar el repositorio en dist y dejar sólo rama gh-pages vacía.
 
+	- mkdir dist
+
 	- cd dist
 
 	- git clone https://github.com/cristinafsanz/vue-gh-pages.git .
